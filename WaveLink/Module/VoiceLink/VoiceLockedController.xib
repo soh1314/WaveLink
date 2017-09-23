@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VoiceLockedController">
+            <connections>
+                <outlet property="bgTopImageView" destination="GOG-Mt-eHE" id="qbF-2n-d6r"/>
+                <outlet property="reLock" destination="nrw-KC-TkS" id="wCl-dV-p9A"/>
+                <outlet property="resultLabel" destination="6qe-0K-scN" id="r1O-hS-nmo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="GOG-Mt-eHE">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="260" id="x17-mj-xhK"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrw-KC-TkS" customClass="EasyActionBtn">
+                    <rect key="frame" x="156.5" y="158.5" width="62" height="30"/>
+                    <state key="normal" title="继续锁定"/>
+                    <connections>
+                        <action selector="relock:" destination="-1" eventType="touchUpInside" id="boK-zj-XOR"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="很多个红包，很多个抽奖券" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qe-0K-scN">
+                    <rect key="frame" x="101.5" y="121.5" width="171.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="nrw-KC-TkS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="38q-Yu-e3b"/>
+                <constraint firstItem="nrw-KC-TkS" firstAttribute="top" secondItem="6qe-0K-scN" secondAttribute="bottom" constant="20" id="ET0-FR-I6m"/>
+                <constraint firstItem="GOG-Mt-eHE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GJq-xK-wBf"/>
+                <constraint firstAttribute="trailing" secondItem="GOG-Mt-eHE" secondAttribute="trailing" id="kT0-0C-ImA"/>
+                <constraint firstItem="6qe-0K-scN" firstAttribute="centerY" secondItem="GOG-Mt-eHE" secondAttribute="centerY" id="tWN-qg-0Hc"/>
+                <constraint firstItem="GOG-Mt-eHE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xCG-iC-oQW"/>
+                <constraint firstItem="6qe-0K-scN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ybQ-hF-PnU"/>
+            </constraints>
+            <point key="canvasLocation" x="-152" y="62"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg.png" width="360" height="583"/>
+    </resources>
+</document>

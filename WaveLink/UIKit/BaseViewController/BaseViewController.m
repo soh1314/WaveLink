@@ -14,16 +14,47 @@
 
 @implementation BaseViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self hidesBottomBarWhenPushed];
+    if (self.navigationController) {
+        [UINavigationBar appearance].backIndicatorTransitionMaskImage = [UIImage imageNamed:@"answer_back_ic"];
+        [UINavigationBar appearance].backIndicatorImage = [UIImage imageNamed:@"answer_back_ic"];
+        [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
+    }
+    self.title = [self easyTittle:kBundleId];
+    
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (self.navbarStyle == TYTBlackNavBarStyle) {
+        [self setBlackNavBar];
+    } else {
+        [self setWhiteTrasluntNavBar];
+    }
+  
+   
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    
+   
+    
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear:animated];
+    
 }
 
 /*

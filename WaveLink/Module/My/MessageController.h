@@ -1,13 +1,13 @@
 //
 //  MessageController.h
-//  WaveLink
+//  TRGFShop
 //
-//  Created by 刘仰清 on 2017/8/31.
-//  Copyright © 2017年 HearMe. All rights reserved.
+//  Created by 刘仰清 on 2017/9/4.
+//  Copyright © 2017年 trgf. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface MessageController : UIViewController
+@interface MessageController : BaseViewController
 
 @end

@@ -8,7 +8,7 @@
 
 #import "TGTabBarController.h"
 #import "TGTabBarSubViewController.h"
-
+#import "LoginViewController.h"
 
 @interface TGTabBarController ()<UITabBarControllerDelegate>
 
@@ -25,13 +25,23 @@
     [self setSubControllers];
     [self setUI];
     
-    
     // Do any additional setup after loading the view.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSString *everLogin = [[NSUserDefaults standardUserDefaults]objectForKey:@"everLogin"];
+    if (!everLogin) {
+        LoginViewController *login = [[LoginViewController alloc]init];
+        [self presentViewController:login animated:NO completion:nil];
+    }
+}
+
 - (void)setUI {
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+    
     self.view.backgroundColor = [UIColor whiteColor];
+    self.tabBar.tintColor = [UIColor redColor];
+    self.tabBar.translucent = NO;
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                        [UIColor lightGrayColor], NSForegroundColorAttributeName,
                                                        nil] forState:UIControlStateNormal];
@@ -44,17 +54,19 @@
 - (void)setSubControllers {
     VoiceLinkingController *home = [[VoiceLinkingController alloc]init];
     TGNavigationCotroller *homeNav = [[TGNavigationCotroller alloc]initWithRootViewController:home];
-    homeNav.tabBarItem = [[UITabBarItem alloc]initWithTitle:tabbar_tantan image:nil tag:0 ];
-    BonusController *bonus = [[BonusController alloc]init];
-    TGNavigationCotroller *bonusNav = [[TGNavigationCotroller alloc]initWithRootViewController:bonus];
-    bonusNav.tabBarItem = [[UITabBarItem alloc]initWithTitle:tabbar_hongbao image:nil tag:1 ];
-    TicketController *ticket = [[TicketController alloc]init];
+    homeNav.tabBarItem = [[UITabBarItem alloc]initWithTitle:tabbar_tantan image:[UIImage qsImageNamed:@"tantan_tab"] selectedImage:[UIImage qsImageNamed:@"tantan_tab_t"]];
+    RedPacketController *redpackt = [[RedPacketController alloc]init];
+    TGNavigationCotroller *redpacktNav = [[TGNavigationCotroller alloc]initWithRootViewController:redpackt];
+    redpacktNav.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldFont4]};
+    redpacktNav.tabBarItem = [[UITabBarItem alloc]initWithTitle:tabbar_redPacket image:[UIImage qsImageNamed:@"red_tab"] selectedImage:[UIImage qsImageNamed:@"red_tab_t"]  ];
+    RaffleTicketController *ticket = [[RaffleTicketController alloc]init];
     TGNavigationCotroller *ticketNav = [[TGNavigationCotroller alloc]initWithRootViewController:ticket];
-    ticketNav.tabBarItem = [[UITabBarItem alloc]initWithTitle:tabbar_ticket image:nil tag:2 ];
-    MeController *me = [[MeController alloc]init];
+    ticketNav.tabBarItem = [[UITabBarItem alloc]initWithTitle:tabbar_raffleTicket image:[UIImage qsImageNamed:@"voucher_tab"]  selectedImage:[UIImage qsImageNamed:@"voucher_tab_t"] ];
+    ticketNav.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldFont4]};
+    UserCenterController *me = [[UserCenterController alloc]init];
     TGNavigationCotroller *meNav = [[TGNavigationCotroller alloc]initWithRootViewController:me];
-    meNav.tabBarItem = [[UITabBarItem alloc]initWithTitle:tabbar_me image:nil tag:3 ];
-    self.viewControllers = @[homeNav,bonusNav,ticketNav,meNav];
+    meNav.tabBarItem = [[UITabBarItem alloc]initWithTitle:tabbar_my image:[UIImage qsImageNamed:@"my_tab"]  selectedImage:[UIImage qsImageNamed:@"my_tab_t"]  ];
+    self.viewControllers = @[homeNav,redpacktNav,ticketNav,meNav];
 }
 
 #pragma mark - TabBarController Delegate
@@ -67,14 +79,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

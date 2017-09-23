@@ -6,8 +6,11 @@
 //  Copyright © 2017年 HearMe. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface WalletController : UIViewController
+@interface WalletController : BaseViewController
+@property (weak, nonatomic) IBOutlet UIButton *withdrawBtn;
+
+- (IBAction)withDraw:(id)sender;
 
 @end

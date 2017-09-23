@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "TGTabBarController.h"
+#import "ESDBHelper.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,8 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [ESDBHelper prepareDBWhenStartAPP];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     TGTabBarController *tabBarController = [[TGTabBarController alloc]init];
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];

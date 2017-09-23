@@ -7,4 +7,7 @@ pod 'MBProgressHUD', '~> 0.9.2'
 pod 'JSONModel'
 pod 'FMDB'
 pod 'MJRefresh', '~> 3.1.0'
+pod 'CocoaSecurity'
+pod 'SAMKeychain'
+pod 'IQKeyboardManager'
 end

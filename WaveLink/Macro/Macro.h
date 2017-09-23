@@ -16,13 +16,38 @@
 # define DLog(...);
 #endif
 
-#define kAppUrl(host,path) [NSString stringWithFormat:@"%@%@",host,path]
+//ui
 #define KWINDOW [UIApplication sharedApplication].delegate.window
-#define KSCREENW [UIScreen mainScreen].nativeBounds.size.width/2.0
-#define KSCREENH [UIScreen mainScreen].nativeBounds.size.height/2.0
-#define KRATIO   KSCREENW/320.0
+#define KSCREENW [UIScreen mainScreen].bounds.size.width
+#define KSCREENH [UIScreen mainScreen].bounds.size.height
+#define KRATIO   KSCREENW/360.0
+#define KSCREENSCALE [UIScreen mainScreen].scale
+#define KNAVBARHEIGHT 64
+/**  *  1 判断是否为3.5inch      320*480  */
+#define ONESCREEN ([UIScreen mainScreen].bounds.size.height == 480)
+/**  *  2 判断是否为4inch        640*1136  */
+#define TWOSCREEN ([UIScreen mainScreen].bounds.size.height == 568)
+/**  *  3 判断是否为4.7inch   375*667   750*1334  */
+#define THREESCREEN ([UIScreen mainScreen].bounds.size.height == 667)
+/**  *  4 判断是否为5.5inch   414*1104   1242*2208  */
+#define FOURSCREEN ([UIScreen mainScreen].bounds.size.height == 1104)
 
+#define IPHONE4OR4S ONESCREEN
+#define IPHONE5OR5S TWOSCREEN
+#define IPHONE6OR6S FOURSCREEN
+
+#import "UIFont+Util.h"
+#import "UIViewController+EasyUtil.h"
+
+#define KCELLLEFTPADDING 15
+
+//util
+#define kAppUrl(host,path) [NSString stringWithFormat:@"%@%@",host,path]
+#define KINT2STR(a)  [NSString stringWithFormat:@"%ld",a]
 #define kHomeDir NSHomeDirectory()
 #define kDocDir  [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+
+//sys
+#import "SysMacro.h"
 
 #endif /* Macro_h */

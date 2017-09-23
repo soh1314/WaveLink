@@ -8,6 +8,8 @@
 //
 
 #import "WalletController.h"
+#import "WalletDetailController.h"
+#import "WithdrawController.h"
 
 @interface WalletController ()
 
@@ -17,7 +19,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initUI];
     // Do any additional setup after loading the view.
+}
+
+- (void)initUI {
+    self.navbarStyle = TYTBlackNavBarStyle;
+    [self addBackNavItem];
+    UIBarButtonItem *detailBtn = [[UIBarButtonItem alloc]initWithTitle:@"明细" style:UIBarButtonItemStylePlain target:self action:@selector(pushDetail:)];
+    self.navigationItem.rightBarButtonItem = detailBtn;
+    self.withdrawBtn.clipsToBounds = YES;
+    self.withdrawBtn.layer.cornerRadius = 20;
+    self.withdrawBtn.backgroundColor = [UIColor themeColor];
+    [self.withdrawBtn mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(40);
+    }];
+    
+}
+
+- (void)pushDetail:(id)sender {
+    WalletDetailController *detaile = [WalletDetailController new];
+    kNavPushController(detaile,self);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,4 +57,9 @@
 }
 */
 
+- (IBAction)withDraw:(id)sender {
+    WithdrawController *withdraw = [WithdrawController new];
+    kNavPushController(withdraw, self);
+    NSLog(@"零钱提现");
+}
 @end

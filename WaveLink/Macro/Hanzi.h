@@ -10,9 +10,9 @@
 #define Hanzi_h
 
 #define tabbar_tantan           @"探一探"
-#define tabbar_hongbao          @"红包"
-#define tabbar_ticket           @"抽奖券"
-#define tabbar_me               @"我的"
+#define tabbar_redPacket        @"红包"
+#define tabbar_raffleTicket     @"抽奖劵"
+#define tabbar_my               @"我的"
 
 
 

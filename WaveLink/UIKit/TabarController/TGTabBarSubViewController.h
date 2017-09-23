@@ -8,9 +8,9 @@
 
 #ifndef TGTabBarSubViewController_h
 #define TGTabBarSubViewController_h
-#import "MeController.h"
 #import "VoiceLinkingController.h"
-#import "BonusController.h"
-#import "TicketController.h"
+#import "RedPacketController.h"
+#import "RaffleTicketController.h"
+#import "UserCenterController.h"
 
 #endif /* TGTabBarSubViewController_h */

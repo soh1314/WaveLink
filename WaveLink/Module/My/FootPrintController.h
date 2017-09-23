@@ -6,8 +6,8 @@
 //  Copyright © 2017年 HearMe. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface FootPrintController : UIViewController
+@interface FootPrintController : BaseViewController
 
 @end

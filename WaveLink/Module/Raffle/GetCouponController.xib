@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GetCouponController">
+            <connections>
+                <outlet property="topView" destination="Stc-v2-arv" id="PP6-EK-l6h"/>
+                <outlet property="topViewHeights" destination="Y87-f3-j6L" id="4sR-Xb-ifC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="the lottery_explain_ic.png" translatesAutoresizingMaskIntoConstraints="NO" id="VHZ-y6-RmS">
+                    <rect key="frame" x="20" y="504" width="11" height="11"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请至奖券中心查看" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rb1-13-V2G">
+                    <rect key="frame" x="41" y="501" width="114.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Stc-v2-arv">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="308"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="308" id="Y87-f3-j6L"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rb6-76-4ih">
+                    <rect key="frame" x="0.0" y="328" width="375" height="165"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_one.png" translatesAutoresizingMaskIntoConstraints="NO" id="ity-x7-ImA">
+                            <rect key="frame" x="15" y="0.0" width="345" height="165"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lottery_time_ic.png" translatesAutoresizingMaskIntoConstraints="NO" id="XdF-Q2-9uX">
+                            <rect key="frame" x="35" y="124" width="21" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lottery_commodity_ic.png" translatesAutoresizingMaskIntoConstraints="NO" id="t2A-Mp-g6Z">
+                            <rect key="frame" x="35" y="97" width="21" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="360运动抽奖劵" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX3-Kf-9zM">
+                            <rect key="frame" x="71" y="95" width="128" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2017-6-12 09:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLD-wH-sZK">
+                            <rect key="frame" x="71" y="122" width="128" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nl-Vs-nhT">
+                            <rect key="frame" x="289" y="105" width="46" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="待开奖"/>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qr6-ox-jTc">
+                            <rect key="frame" x="35" y="21" width="54" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¥10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBd-hf-13Y">
+                            <rect key="frame" x="259" y="33" width="76" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ity-x7-ImA" secondAttribute="bottom" id="3gf-dZ-mci"/>
+                        <constraint firstAttribute="trailing" secondItem="ity-x7-ImA" secondAttribute="trailing" constant="15" id="JKg-P7-eZt"/>
+                        <constraint firstItem="ity-x7-ImA" firstAttribute="top" secondItem="rb6-76-4ih" secondAttribute="top" id="cWQ-5I-b11"/>
+                        <constraint firstItem="ity-x7-ImA" firstAttribute="leading" secondItem="rb6-76-4ih" secondAttribute="leading" constant="15" id="iNA-rw-kq4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VHZ-y6-RmS" firstAttribute="centerY" secondItem="rb1-13-V2G" secondAttribute="centerY" id="4oe-0k-M6I"/>
+                <constraint firstAttribute="trailing" secondItem="rb6-76-4ih" secondAttribute="trailing" id="Bji-Br-A0a"/>
+                <constraint firstItem="rb6-76-4ih" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JDK-Fr-BvX"/>
+                <constraint firstItem="VHZ-y6-RmS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Rbl-wl-NRW"/>
+                <constraint firstItem="Stc-v2-arv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TSJ-mx-BKc"/>
+                <constraint firstAttribute="trailing" secondItem="Stc-v2-arv" secondAttribute="trailing" id="WHu-ki-jpX"/>
+                <constraint firstItem="rb1-13-V2G" firstAttribute="leading" secondItem="VHZ-y6-RmS" secondAttribute="trailing" constant="10" id="oz4-vQ-I2W"/>
+                <constraint firstItem="Stc-v2-arv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qR2-7Q-b0M"/>
+                <constraint firstItem="rb6-76-4ih" firstAttribute="top" secondItem="Stc-v2-arv" secondAttribute="bottom" constant="20" id="vKA-b0-eBO"/>
+                <constraint firstItem="rb1-13-V2G" firstAttribute="top" secondItem="rb6-76-4ih" secondAttribute="bottom" constant="8" id="vMZ-hc-yLS"/>
+            </constraints>
+            <point key="canvasLocation" x="119" y="-30"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_one.png" width="349" height="165"/>
+        <image name="lottery_commodity_ic.png" width="11" height="10"/>
+        <image name="lottery_time_ic.png" width="12" height="12"/>
+        <image name="the lottery_explain_ic.png" width="11" height="11"/>
+    </resources>
+</document>

@@ -1,13 +1,15 @@
 //
-//  PrefixHeader.pch
-//  WaveLink
+//  Prefix.header.h
+//  TRGFShop
 //
-//  Created by 刘仰清 on 2017/9/5.
-//  Copyright © 2017年 HearMe. All rights reserved.
+//  Created by 刘仰清 on 2017/9/4.
+//  Copyright © 2017年 trgf. All rights reserved.
 //
 
-#ifndef PrefixHeader_pch
-#define PrefixHeader_pch
+#import <Availability.h>
+
+#ifndef Prefix_header_h
+#define Prefix_header_h
 
 #ifdef __OBJC__
 
@@ -18,6 +20,8 @@
 #import "UIImage+base.h"
 #import "TGNavigationCotroller.h"
 #import "EasyBaseCell.h"
+#import "EaseTableView.h"
+#import "UIColor+Hexadecimal.h"
 
 #import <AFNetworking/AFNetworking.h>
 #import "Dialog.h"
@@ -26,9 +30,10 @@
 
 #import <Masonry.h>
 #import <MJRefresh.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 
 #endif
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-#endif /* PrefixHeader_pch */
+#endif /* Prefix_header_h */
